@@ -1,0 +1,36 @@
+{
+  "name": "pm_22_13",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sawerut/pm_22_13.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sawerut/pm_22_13/issues"
+  },
+  "homepage": "https://github.com/sawerut/pm_22_13#readme",
+  "dependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "bootstrap": "^5.3.8",
+    "gulp": "^5.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^6.0.1",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.93.2"
+  },
+  "devDependencies": {
+    "gulp-file-include": "^2.3.0"
+  }
+}

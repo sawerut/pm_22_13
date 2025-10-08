@@ -1,34 +1,63 @@
-// Основний JavaScript файл
-function showMessage(text, type = 'info') {
-    const messageDiv = document.getElementById('message');
-    const messageText = document.getElementById('messageText');
-    
-    messageText.textContent = text;
-    messageDiv.className = `message show ${type}`;
-    
-    setTimeout(() => {
-        messageDiv.classList.remove('show');
-    }, 3000);
-}
-
-function test() {
-    showMessage('Вітаю! Gulp успішно працює! 🎉', 'success');
-    console.log('Gulp тест пройдений успішно!');
-}
-
-function changeBackground() {
-    const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57'];
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    document.body.style.background = randomColor;
-    showMessage('Фон змінено!', 'warning');
-}
-
-function resetStyles() {
-    document.body.style.background = '';
-    showMessage('Стилі скинуто!', 'info');
-}
-
-// Додаємо обробники подій після завантаження DOM
+// Функціонал для резюме
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Сторінка завантажена! Gulp працює коректно.');
+    console.log('Резюме Laura Parker завантажено');
+    
+    // Анімація при завантаженні
+    const animateSections = () => {
+        const sections = document.querySelectorAll('.section-title');
+        sections.forEach((section, index) => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateX(-20px)';
+            section.style.transition = 'all 0.5s ease';
+            
+            setTimeout(() => {
+                section.style.opacity = '1';
+                section.style.transform = 'translateX(0)';
+            }, index * 100);
+        });
+    };
+    
+    // Плавна навігація
+    const setupNavigation = () => {
+        const navLinks = document.querySelectorAll('.list-group-item[href^="#"]');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    };
+    
+    // Ініціалізація
+    animateSections();
+    setupNavigation();
 });
+
+// Функції для кнопок
+function downloadResume() {
+    alert('Функція завантаження PDF буде реалізована тут!');
+}
+
+function printResume() {
+    window.print();
+}
+
+function shareResume() {
+    if (navigator.share) {
+        navigator.share({
+            title: 'Резюме Laura Parker - UI/UX Designer',
+            text: 'Професійне резюме дизайнера',
+            url: window.location.href
+        });
+    } else {
+        alert('Поділіться посиланням: ' + window.location.href);
+    }
+}
