@@ -4,141 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laura Parker - UI & UX Designer</title>
-    <!-- Bootstrap CSS -->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@300;400;500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Ваші стилі -->
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <!-- Header з іменем та фото -->
     <header class="resume-header">
-        <div class="header-content">
-            <div class="name-section">
-                <h1 class="first-name">LAURA</h1>
-                <h1 class="last-name">PARKER</h1>
-                <h2 class="profession">UI & UX DESIGNER</h2>
-            </div>
-            <div class="photo-section">
-                <div class="photo-placeholder">
-                    <span>PHOTO</span>
-                </div>
-            </div>
+    <div class="header-content">
+        <div class="name-section">
+            <h1 class="first-name">LAURA</h1>
+            <h1 class="last-name">PARKER</h1>
+            <h2 class="profession">UI & UX DESIGNER</h2>
         </div>
-    </header>
-
-    <!-- Основний контент -->
-    <div class="main-container">
-        <div class="wrapper">
-            <!-- Main content - ліва частина -->
-            <div class="main-content">
-                <!-- Contact info -->
-                <div class="contact-container">
-                    <h3 class="main-content-title">CONTACT</h3>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <strong>Phone</strong>
-                            <span>0123 456 789</span>
-                        </div>
-                        <div class="contact-item">
-                            <strong>Email</strong>
-                            <span>uremail@namehere</span>
-                        </div>
-                        <div class="contact-item">
-                            <strong>Address</strong>
-                            <span>Your Street Address</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Profile -->
-                <div class="profile-container">
-                    <h3 class="main-content-title">PROFILE</h3>
-                    <p class="profile-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid.
-                    </p>
-                </div>
-
-                <!-- Experience -->
-                <div class="experience-container">
-                    <h3 class="main-content-title">EXPERIENCE</h3>
-                    
-                    <!-- Experience 1 -->
-                    <div class="experience-item">
-                        <h4 class="experience-position">Senior UX Designer - Present</h4>
-                        <p class="experience-company">Company Name / Location</p>
-                        <p class="experience-description">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                        </p>
-                    </div>
-
-                    <!-- Experience 2 -->
-                    <div class="experience-item">
-                        <h4 class="experience-position">UX Designer - 2016</h4>
-                        <p class="experience-company">Company Name / Location</p>
-                        <p class="experience-description">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Reference -->
-                <div class="reference-container">
-                    <h3 class="main-content-title">REFERENCE</h3>
-                    <div class="reference-item">
-                        <h4 class="reference-position">Senior Designer</h4>
-                        <p class="reference-name">Jhon Ander Smith</p>
-                        <p class="reference-company">Company name here</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sidebar - права частина -->
-            <aside class="sidebar">
-                <!-- Education -->
-                <div class="education-container">
-                    <h3 class="sidebar-title">EDUCATION</h3>
-                    
-                    <div class="education-item">
-                        <h4 class="education-years">2014 - 2016</h4>
-                        <p class="education-degree">Degree / Major Name</p>
-                        <p class="education-university">University name here</p>
-                    </div>
-
-                    <div class="education-item">
-                        <h4 class="education-years">2010 - 2014</h4>
-                        <p class="education-degree">Degree / Major Name</p>
-                        <p class="education-university">University name here</p>
-                    </div>
-                </div>
-
-                <!-- Language -->
-                <div class="language-container">
-                    <h3 class="sidebar-title">LANGUAGE</h3>
-                    <ul class="language-list">
-                        <li class="language-item">• English</li>
-                        <li class="language-item">• French</li>
-                        <li class="language-item">• Spanish</li>
-                    </ul>
-                </div>
-
-                <!-- Skills -->
-                <div class="skills-container">
-                    <h3 class="sidebar-title">SKILLS</h3>
-                    <ul class="skills-list">
-                        <li class="skills-item">• Photoshop</li>
-                        <li class="skills-item">• Illustrator</li>
-                        <li class="skills-item">• InDesign</li>
-                        <li class="skills-item">• After Effects</li>
-                        <li class="skills-item">• Sketch</li>
-                    </ul>
-                </div>
-            </aside>
+        <div class="photo-section">
+            <img src="img/unnamed.png" alt="Laura Parker" class="profile-photo">
         </div>
     </div>
+</header>
 
-    <!-- Bootstrap JS -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- Ваші скрипти -->
-    <script src="js/script.min.js"></script>
+    <div class="main-container">
+        <div class="wrapper">
+            <div class="main-content">
+
+                <div class="left-column">
+                    <div class="contact-container">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">0123 456 789</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">uremail@namehere</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Address</span>
+                                <span class="contact-value">Your Street Address</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="left-column-content">
+                        <div class="profile-container">
+                            <h3 class="section-title">PROFILE</h3>
+                            <p class="profile-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                            </p>
+                        </div>
+
+                        <div class="experience-container">
+                            <h3 class="section-title">EXPERIENCE</h3>
+                            <div class="experience-item">
+                                <h4 class="experience-position">Senior UX Designer - Present</h4>
+                                <p class="experience-company">Company Name / Location</p>
+                                <p class="experience-description">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                                </p>
+                            </div>
+                            <div class="experience-item">
+                                <h4 class="experience-position">UX Designer - 2016</h4>
+                                <p class="experience-company">Company Name / Location</p>
+                                <p class="experience-description">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="reference-container">
+                            <h3 class="section-title">REFERENCE</h3>
+                            <div class="reference-list">
+                                <div class="reference-item">
+                                    <h4 class="reference-position">Senior Designer</h4>
+                                    <p class="reference-name">Jhon Ander Smith</p>
+                                    <p class="reference-company">Company name here</p>
+                                </div>
+                                <div class="reference-item">
+                                    <h4 class="reference-position">Senior Designer</h4>
+                                    <p class="reference-name">Jhon Smith</p>
+                                    <p class="reference-company">Company name here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <div class="education-container">
+                        <h3 class="section-title">EDUCATION</h3>
+                        <div class="education-item">
+                            <h4 class="education-years">2014 - 2016</h4>
+                            <p class="education-degree">Degree / Major Name</p>
+                            <p class="education-university">University name here</p>
+                        </div>
+                        <div class="education-item">
+                            <h4 class="education-years">2010 - 2014</h4>
+                            <p class="education-degree">Degree / Major Name</p>
+                            <p class="education-university">University name here</p>
+                        </div>
+                    </div>
+
+                    <div class="language-container">
+                        <h3 class="section-title">LANGUAGE</h3>
+                        <ul class="language-list">
+                            <li class="language-item">English</li>
+                            <li class="language-item">French</li>
+                            <li class="language-item">Spanish</li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-container">
+                        <h3 class="section-title">SKILLS</h3>
+                        <ul class="skills-list">
+                            <li class="skills-item">Photoshop</li>
+                            <li class="skills-item">Illustrator</li>
+                            <li class="skills-item">InDesign</li>
+                            <li class="skills-item">After Effects</li>
+                            <li class="skills-item">Sketch</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
 </body>
 </html>

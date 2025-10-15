@@ -30,7 +30,7 @@ function scripts() {
 }
 
 function images() {
-    return src('app/img/*')
+    return src('app/img/*', {encoding: false})
         .pipe(dest('dist/img/'));
 }
 // Таска для Bootstrap CSS

@@ -1,0 +1,141 @@
+//  Стилі для лівої колонки 
+.left-column {
+    flex: 1;
+
+    // Контактна інформація
+    .contact-container {
+        margin-bottom: $spacing-xl;
+        
+        .contact-info {
+            width: 100%; // Розтягуємо на всю ширину колонки
+            background-color: $color-contact-bg;
+            padding: $spacing-lg;
+            border-radius: 0; // Гострі кути
+
+            //  Розміщуємо елементи контактів в рядок
+            display: flex;
+            justify-content: space-around;
+            
+            .contact-item {
+                text-align: center; // Центруємо текст всередині кожного блоку
+
+                // Робимо span блочними, щоб вони стали один під одним
+                .contact-label, .contact-value {
+                    display: block;
+                    color: $color-white;
+                    font-family: $font-family-poppins;
+                }
+                
+                .contact-label {
+                    font-size: $font-size-contact-label;
+                    font-weight: 600;
+                    margin-bottom: $spacing-xs;
+                }
+                
+                .contact-value {
+                    font-size: $font-size-contact-value;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    // Обгортка для контенту з відступом справа
+    .left-column-content {
+        padding-right: $spacing-xl;
+    }
+
+    // Профіль
+    .profile-container {
+        margin-bottom: $spacing-xl;
+        
+        .profile-text {
+            width: $profile-width;
+            font-size: $font-size-body-large;
+            line-height: 1.6;
+            color: $color-gray;
+            font-weight: 300;
+            font-family: $font-family-roboto;
+            margin: 0;
+        }
+    }
+
+    // Досвід роботи
+    .experience-container {
+        margin-bottom: $spacing-xl;
+        
+        .experience-item {
+            margin-bottom: $spacing-lg;
+            
+            .experience-position {
+                font-size: $font-size-body-large;
+                font-weight: 600;
+                color: $color-dark;
+                margin: 0 0 $spacing-xs 0;
+            }
+            
+            .experience-company {
+                font-style: italic;
+                color: $color-light-gray;
+                margin: 0 0 $spacing-sm 0;
+                font-size: $font-size-body-medium;
+            }
+            
+            .experience-description {
+                width: $experience-width;
+                font-size: $font-size-body-medium;
+                line-height: 1.5;
+                color: $color-gray;
+                font-weight: 300;
+                font-family: $font-family-roboto;
+                margin: 0;
+            }
+        }
+    }
+
+    // Рекомендації
+    .reference-container {
+        .reference-list {
+            display: flex;
+            justify-content: space-between;
+            gap: $spacing-lg;
+        }
+        
+        .reference-item {
+            .reference-position {
+                font-size: $font-size-body-large;
+                font-weight: 600;
+                color: $color-dark;
+                margin: 0 0 $spacing-xs 0;
+            }
+            
+            .reference-name {
+                font-weight: 500;
+                color: $color-dark;
+                margin: 0 0 $spacing-xs 0;
+            }
+            
+            .reference-company {
+                color: $color-light-gray;
+                font-size: $font-size-body-medium;
+                margin: 0;
+            }
+        }
+    }
+
+    @include respond-to('md') {
+        border-right: none;
+        padding-right: 0;
+        margin-bottom: $spacing-xl;
+
+        // Повертаємо рекомендації в стовпець на мобільних
+        .reference-container .reference-list {
+            flex-direction: column;
+        }
+
+        // Забираємо відступ на мобільних
+        .left-column-content {
+            padding-right: 0;
+        }
+    }
+}

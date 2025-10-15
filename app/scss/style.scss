@@ -1,325 +1,42 @@
-// Стилі для резюме
+// Імпорт утиліт
+@import 'utils/variables';
+@import 'utils/mixins';
+
+// Імпорт компонентів
+@import 'components/header';
+@import 'components/main-content';
+@import 'components/left-column';
+@import 'components/right-column';
+
+// ===== Глобальні стилі =====
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: $font-family-roboto;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
     line-height: 1.4;
-    color: #333;
+    color: $color-gray;
 }
 
-// Хедер
-.resume-header {
-    background: #f8f9fa;
-    padding: 40px 0;
-    border-bottom: 2px solid #e9ecef;
-    
-    .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 40px;
-    }
-    
-    .name-section {
-        .first-name {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #333;
-            margin: 0;
-            text-transform: uppercase;
-            line-height: 1;
-        }
-        
-        .last-name {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #333;
-            margin: 0;
-            text-transform: uppercase;
-            line-height: 1;
-        }
-        
-        .profession {
-            font-size: 1.2rem;
-            font-weight: 300;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin: 10px 0 0 0;
-        }
-    }
-    
-    .photo-section {
-        .photo-placeholder {
-            width: 150px;
-            height: 150px;
-            background: #e9ecef;
-            border: 2px solid #007bff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            
-            span {
-                color: #007bff;
-                font-weight: 600;
-                font-size: 1rem;
-            }
-        }
+// ===== Адаптивність =====
+@include respond-to('lg') {
+    .main-container {
+        padding: $spacing-lg;
     }
 }
 
-// Основний контейнер
-.main-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px;
-}
-
-.wrapper {
-    display: flex;
-    background: white;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-}
-
-// Основна частина (ліва)
-.main-content {
-    flex: 1;
-    padding: 40px;
-    border-right: 2px solid #e9ecef;
-}
-
-// Сайдбар (права)
-.sidebar {
-    width: 300px;
-    padding: 40px;
-    background: #f8f9fa;
-}
-
-// Заголовки секцій
-.main-content-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #333;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #007bff;
-}
-
-.sidebar-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #333;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #007bff;
-}
-
-// Контактна інформація
-.contact-container {
-    margin-bottom: 30px;
-    
-    .contact-info {
-        .contact-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.8rem;
-            
-            strong {
-                font-weight: 600;
-                color: #333;
-            }
-            
-            span {
-                color: #666;
-            }
-        }
-    }
-}
-
-// Профіль
-.profile-container {
-    margin-bottom: 30px;
-    
-    .profile-text {
-        color: #666;
-        line-height: 1.6;
-        margin: 0;
-    }
-}
-
-// Досвід роботи
-.experience-container {
-    margin-bottom: 30px;
-    
-    .experience-item {
-        margin-bottom: 25px;
-        
-        .experience-position {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #333;
-            margin: 0 0 5px 0;
-        }
-        
-        .experience-company {
-            font-style: italic;
-            color: #888;
-            margin: 0 0 8px 0;
-            font-size: 0.9rem;
-        }
-        
-        .experience-description {
-            color: #666;
-            line-height: 1.5;
-            margin: 0;
-            font-size: 0.9rem;
-        }
-    }
-}
-
-// Рекомендації
-.reference-container {
-    .reference-item {
-        .reference-position {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #333;
-            margin: 0 0 5px 0;
-        }
-        
-        .reference-name {
-            font-weight: 500;
-            color: #555;
-            margin: 0 0 3px 0;
-        }
-        
-        .reference-company {
-            color: #666;
-            font-size: 0.9rem;
-            margin: 0;
-        }
-    }
-}
-
-// Освіта
-.education-container {
-    margin-bottom: 30px;
-    
-    .education-item {
-        margin-bottom: 20px;
-        
-        .education-years {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #333;
-            margin: 0 0 5px 0;
-        }
-        
-        .education-degree {
-            font-weight: 500;
-            color: #555;
-            margin: 0 0 3px 0;
-        }
-        
-        .education-university {
-            color: #666;
-            font-size: 0.9rem;
-            margin: 0;
-        }
-    }
-}
-
-// Мови
-.language-container {
-    margin-bottom: 30px;
-    
-    .language-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        
-        .language-item {
-            color: #666;
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-    }
-}
-
-// Навички
-.skills-container {
-    .skills-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        
-        .skills-item {
-            color: #666;
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-    }
-}
-
-// Адаптивність
-@media (max-width: 768px) {
-    .resume-header {
-        .header-content {
-            flex-direction: column;
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .photo-section {
-            margin-top: 20px;
-        }
-        
-        .name-section {
-            .first-name, .last-name {
-                font-size: 2.5rem;
-            }
-        }
-    }
-    
-    .wrapper {
-        flex-direction: column;
+@include respond-to('md') {
+    .main-container {
+        padding: $spacing-md;
     }
     
     .main-content {
-        border-right: none;
-        border-bottom: 2px solid #e9ecef;
-        padding: 20px;
-    }
-    
-    .sidebar {
-        width: 100%;
-        padding: 20px;
+        flex-direction: column;
     }
 }
 
-@media (max-width: 480px) {
-    .resume-header {
-        .name-section {
-            .first-name, .last-name {
-                font-size: 2rem;
-            }
-            
-            .profession {
-                font-size: 1rem;
-            }
-        }
-    }
-    
-    .contact-info .contact-item {
-        flex-direction: column;
-        
-        span {
-            margin-top: 5px;
-        }
+@include respond-to('sm') {
+    .main-container {
+        padding: $spacing-sm;
     }
 }

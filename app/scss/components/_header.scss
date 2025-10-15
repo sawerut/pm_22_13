@@ -1,0 +1,81 @@
+
+//  Стилі для хедера 
+.resume-header {
+
+    background: $color-white;
+    padding: $spacing-xl 0;
+    
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 $spacing-xl;
+        
+        .name-section {
+            .first-name {
+                font-size: $font-size-name;
+                font-weight: 700;
+                color: $color-dark;
+                margin: 0;
+                text-transform: uppercase;
+                line-height: 1;
+            }
+            
+            .last-name {
+                font-size: $font-size-name;
+                font-weight: 700;
+                color: $color-dark;
+                margin: 0;
+                text-transform: uppercase;
+                line-height: 1;
+            }
+            
+            .profession {
+                font-size: $font-size-profession;
+                font-weight: 300;
+                color: $color-dark-gray;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin: $spacing-sm 0 0 0;
+            }
+        }
+        
+        .photo-section {
+            .photo-placeholder {
+                width: 150px;
+                height: 150px;
+                background: $color-bg-gray;
+                border: 2px solid $color-dark;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                span {
+                    color: $color-dark;
+                    font-weight: 600;
+                    font-size: $font-size-body-medium;
+                }
+            }
+        }
+    }
+    
+    @include respond-to('md') {
+        .header-content {
+            flex-direction: column;
+            text-align: center;
+            padding: 0 $spacing-md;
+            
+            .name-section {
+                .first-name, .last-name {
+                    font-size: 2rem;
+                }
+            }
+            
+            .photo-section {
+                margin-top: $spacing-md;
+            }
+        }
+    }
+}

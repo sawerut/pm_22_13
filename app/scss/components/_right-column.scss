@@ -1,0 +1,92 @@
+// app/scss/components/_right-column.scss
+
+//  Стилі для правої колонки 
+.right-column {
+    width: $right-column-width;
+    background-color: $color-bg-gray;
+    padding: $spacing-xl;
+
+    // Освіта
+    .education-container {
+        margin-bottom: $spacing-xl;
+        
+        .education-item {
+            margin-bottom: $spacing-lg;
+            
+            .education-years {
+                font-size: $font-size-body-large;
+                font-weight: 600;
+                color: $color-dark;
+                margin: 0 0 $spacing-xs 0;
+            }
+            
+            .education-degree {
+                font-weight: 500;
+                color: $color-dark;
+                margin: 0 0 $spacing-xs 0;
+            }
+            
+            .education-university {
+                color: $color-light-gray;
+                font-size: $font-size-body-medium;
+                margin: 0;
+            }
+        }
+    }
+
+    // Мови
+    .language-container {
+        margin-bottom: $spacing-xl;
+        
+        .language-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+            .language-item {
+                color: $color-gray;
+                margin-bottom: $spacing-sm; // Збільшимо відступ
+                font-size: $font-size-body-medium;
+
+                //  Створюємо кастомний маркер-квадрат
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    background-color: $color-dark;
+                    margin-right: $spacing-sm;
+                }
+            }
+        }
+    }
+
+    // Навички
+    .skills-container {
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+            .skills-item {
+                color: $color-gray;
+                margin-bottom: $spacing-sm; // Збільшимо відступ
+                font-size: $font-size-body-medium;
+
+                // Створюємо кастомний маркер-квадрат
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    background-color: $color-dark;
+                    margin-right: $spacing-sm;
+                }
+            }
+        }
+    }
+
+    @include respond-to('md') {
+        width: 100%;
+    }
+}

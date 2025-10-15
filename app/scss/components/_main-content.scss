@@ -1,0 +1,28 @@
+// Стилі для основного контенту 
+.main-container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: $spacing-xl;
+}
+
+.wrapper {
+    background: white;
+}
+
+// Вмикаємо Flexbox для правильного розташування колонок
+.main-content {
+    display: flex;
+    gap: 0;
+}
+
+// Заголовки секцій (базові стилі)
+.section-title {
+    font-size: $font-size-section-title;
+    letter-spacing: 8px;
+    line-height: 58px;
+    text-transform: uppercase;
+    color: $color-dark;
+    font-weight: 700;
+    font-family: $font-family-poppins;
+    margin-bottom: $spacing-md;
+}

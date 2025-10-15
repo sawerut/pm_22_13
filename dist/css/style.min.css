@@ -1,16 +1,6 @@
-body {
-  font-family: "Arial", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  line-height: 1.4;
-  color: #333;
-}
-
 .resume-header {
-  background: #f8f9fa;
-  padding: 40px 0;
-  border-bottom: 2px solid #e9ecef;
+  background: #ffffff;
+  padding: 3rem 0;
 }
 .resume-header .header-content {
   display: flex;
@@ -18,242 +8,290 @@ body {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 3rem;
 }
-.resume-header .name-section .first-name {
-  font-size: 3rem;
+.resume-header .header-content .name-section .first-name {
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #333;
+  color: #111111;
   margin: 0;
   text-transform: uppercase;
   line-height: 1;
 }
-.resume-header .name-section .last-name {
-  font-size: 3rem;
+.resume-header .header-content .name-section .last-name {
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #333;
+  color: #111111;
   margin: 0;
   text-transform: uppercase;
   line-height: 1;
 }
-.resume-header .name-section .profession {
+.resume-header .header-content .name-section .profession {
   font-size: 1.2rem;
   font-weight: 300;
-  color: #666;
+  color: #363636;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin: 10px 0 0 0;
+  margin: 1rem 0 0 0;
 }
-.resume-header .photo-section .photo-placeholder {
+.resume-header .header-content .photo-section .photo-placeholder {
   width: 150px;
   height: 150px;
-  background: #e9ecef;
-  border: 2px solid #007bff;
+  background: #ebebeb;
+  border: 2px solid #111111;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.resume-header .photo-section .photo-placeholder span {
-  color: #007bff;
+.resume-header .header-content .photo-section .photo-placeholder span {
+  color: #111111;
   font-weight: 600;
-  font-size: 1rem;
-}
-
-.main-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px;
-}
-
-.wrapper {
-  display: flex;
-  background: white;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.main-content {
-  flex: 1;
-  padding: 40px;
-  border-right: 2px solid #e9ecef;
-}
-
-.sidebar {
-  width: 300px;
-  padding: 40px;
-  background: #f8f9fa;
-}
-
-.main-content-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #333;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #007bff;
-}
-
-.sidebar-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #333;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #007bff;
-}
-
-.contact-container {
-  margin-bottom: 30px;
-}
-.contact-container .contact-info .contact-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.8rem;
-}
-.contact-container .contact-info .contact-item strong {
-  font-weight: 600;
-  color: #333;
-}
-.contact-container .contact-info .contact-item span {
-  color: #666;
-}
-
-.profile-container {
-  margin-bottom: 30px;
-}
-.profile-container .profile-text {
-  color: #666;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.experience-container {
-  margin-bottom: 30px;
-}
-.experience-container .experience-item {
-  margin-bottom: 25px;
-}
-.experience-container .experience-item .experience-position {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #333;
-  margin: 0 0 5px 0;
-}
-.experience-container .experience-item .experience-company {
-  font-style: italic;
-  color: #888;
-  margin: 0 0 8px 0;
   font-size: 0.9rem;
 }
-.experience-container .experience-item .experience-description {
-  color: #666;
-  line-height: 1.5;
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-.reference-container .reference-item .reference-position {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #333;
-  margin: 0 0 5px 0;
-}
-.reference-container .reference-item .reference-name {
-  font-weight: 500;
-  color: #555;
-  margin: 0 0 3px 0;
-}
-.reference-container .reference-item .reference-company {
-  color: #666;
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-.education-container {
-  margin-bottom: 30px;
-}
-.education-container .education-item {
-  margin-bottom: 20px;
-}
-.education-container .education-item .education-years {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #333;
-  margin: 0 0 5px 0;
-}
-.education-container .education-item .education-degree {
-  font-weight: 500;
-  color: #555;
-  margin: 0 0 3px 0;
-}
-.education-container .education-item .education-university {
-  color: #666;
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-.language-container {
-  margin-bottom: 30px;
-}
-.language-container .language-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.language-container .language-list .language-item {
-  color: #666;
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-}
-
-.skills-container .skills-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.skills-container .skills-list .skills-item {
-  color: #666;
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-}
-
 @media (max-width: 768px) {
   .resume-header .header-content {
     flex-direction: column;
     text-align: center;
-    padding: 20px;
+    padding: 0 1.5rem;
   }
-  .resume-header .photo-section {
-    margin-top: 20px;
-  }
-  .resume-header .name-section .first-name, .resume-header .name-section .last-name {
-    font-size: 2.5rem;
-  }
-  .wrapper {
-    flex-direction: column;
-  }
-  .main-content {
-    border-right: none;
-    border-bottom: 2px solid #e9ecef;
-    padding: 20px;
-  }
-  .sidebar {
-    width: 100%;
-    padding: 20px;
-  }
-}
-@media (max-width: 480px) {
-  .resume-header .name-section .first-name, .resume-header .name-section .last-name {
+  .resume-header .header-content .name-section .first-name, .resume-header .header-content .name-section .last-name {
     font-size: 2rem;
   }
-  .resume-header .name-section .profession {
-    font-size: 1rem;
+  .resume-header .header-content .photo-section {
+    margin-top: 1.5rem;
   }
-  .contact-info .contact-item {
+}
+
+.main-container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.wrapper {
+  background: white;
+}
+
+.main-content {
+  display: flex;
+  gap: 0;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  letter-spacing: 8px;
+  line-height: 58px;
+  text-transform: uppercase;
+  color: #111111;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.left-column {
+  flex: 1;
+}
+.left-column .contact-container {
+  margin-bottom: 3rem;
+}
+.left-column .contact-container .contact-info {
+  width: 100%;
+  background-color: #111111;
+  padding: 2rem;
+  border-radius: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.left-column .contact-container .contact-info .contact-item {
+  text-align: center;
+}
+.left-column .contact-container .contact-info .contact-item .contact-label, .left-column .contact-container .contact-info .contact-item .contact-value {
+  display: block;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+.left-column .contact-container .contact-info .contact-item .contact-label {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.left-column .contact-container .contact-info .contact-item .contact-value {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.left-column .left-column-content {
+  padding-right: 3rem;
+}
+.left-column .profile-container {
+  margin-bottom: 3rem;
+}
+.left-column .profile-container .profile-text {
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #252525;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+.left-column .experience-container {
+  margin-bottom: 3rem;
+}
+.left-column .experience-container .experience-item {
+  margin-bottom: 2rem;
+}
+.left-column .experience-container .experience-item .experience-position {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111111;
+  margin: 0 0 0.5rem 0;
+}
+.left-column .experience-container .experience-item .experience-company {
+  font-style: italic;
+  color: #707070;
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+}
+.left-column .experience-container .experience-item .experience-description {
+  width: 100%;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #252525;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+.left-column .reference-container .reference-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.left-column .reference-container .reference-item .reference-position {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111111;
+  margin: 0 0 0.5rem 0;
+}
+.left-column .reference-container .reference-item .reference-name {
+  font-weight: 500;
+  color: #111111;
+  margin: 0 0 0.5rem 0;
+}
+.left-column .reference-container .reference-item .reference-company {
+  color: #707070;
+  font-size: 0.9rem;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .left-column {
+    border-right: none;
+    padding-right: 0;
+    margin-bottom: 3rem;
+  }
+  .left-column .reference-container .reference-list {
     flex-direction: column;
   }
-  .contact-info .contact-item span {
-    margin-top: 5px;
+  .left-column .left-column-content {
+    padding-right: 0;
+  }
+}
+
+.right-column {
+  width: 300px;
+  background-color: #ebebeb;
+  padding: 3rem;
+}
+.right-column .education-container {
+  margin-bottom: 3rem;
+}
+.right-column .education-container .education-item {
+  margin-bottom: 2rem;
+}
+.right-column .education-container .education-item .education-years {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111111;
+  margin: 0 0 0.5rem 0;
+}
+.right-column .education-container .education-item .education-degree {
+  font-weight: 500;
+  color: #111111;
+  margin: 0 0 0.5rem 0;
+}
+.right-column .education-container .education-item .education-university {
+  color: #707070;
+  font-size: 0.9rem;
+  margin: 0;
+}
+.right-column .language-container {
+  margin-bottom: 3rem;
+}
+.right-column .language-container .language-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.right-column .language-container .language-list .language-item {
+  color: #252525;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.right-column .language-container .language-list .language-item::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #111111;
+  margin-right: 1rem;
+}
+.right-column .skills-container .skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.right-column .skills-container .skills-list .skills-item {
+  color: #252525;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.right-column .skills-container .skills-list .skills-item::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #111111;
+  margin-right: 1rem;
+}
+@media (max-width: 768px) {
+  .right-column {
+    width: 100%;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  line-height: 1.4;
+  color: #252525;
+}
+
+@media (max-width: 992px) {
+  .main-container {
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .main-container {
+    padding: 1.5rem;
+  }
+  .main-content {
+    flex-direction: column;
+  }
+}
+@media (max-width: 576px) {
+  .main-container {
+    padding: 1rem;
   }
 }
