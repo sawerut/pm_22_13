@@ -1,33 +1,20 @@
-// ===== Міксін для медіа-запитів =====
+// ===== RESPONSIVE MIXIN =====
 @mixin respond-to($breakpoint) {
     @if $breakpoint == 'sm' {
-        @media (max-width: #{$breakpoint-sm}) {
-            @content;
-        }
+        @media (max-width: #{$breakpoint-sm - 1px}) { @content; }
     }
     @if $breakpoint == 'md' {
-        @media (max-width: #{$breakpoint-md}) {
-            @content;
-        }
+        @media (max-width: #{$breakpoint-md - 1px}) { @content; }
     }
     @if $breakpoint == 'lg' {
-        @media (max-width: #{$breakpoint-lg}) {
-            @content;
-        }
+        @media (max-width: #{$breakpoint-lg - 1px}) { @content; }
     }
     @if $breakpoint == 'xl' {
-        @media (max-width: #{$breakpoint-xl}) {
-            @content;
-        }
-    }
-    @if $breakpoint == 'xxl' {
-        @media (max-width: #{$breakpoint-xxl}) {
-            @content;
-        }
+        @media (max-width: #{$breakpoint-xl - 1px}) { @content; }
     }
 }
 
-// ===== Міксін для flexbox =====
+// ===== FLEXBOX MIXIN =====
 @mixin flex-center($direction: row) {
     display: flex;
     flex-direction: $direction;
@@ -35,27 +22,24 @@
     align-items: center;
 }
 
-// ===== Міксін для кнопок =====
-@mixin button-style($bg-color: $color-dark, $text-color: white) {
-    background-color: $bg-color;
-    color: $text-color;
-    border: none;
-    padding: $spacing-xs $spacing-sm;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    
-    &:hover {
-        background-color: darken($bg-color, 10%);
-        transform: translateY(-2px);
-    }
+// ===== CARD MIXIN =====
+@mixin card-style($padding: $spacing-lg, $background: $color-white) {
+    background: $background;
+    padding: $padding;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-// ===== Міксін для карток =====
-@mixin card-style($padding: $spacing-md) {
-    background: white;
-    border-radius: 8px;
-    padding: $padding;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid $color-bg-gray;
+// ===== TYPOGRAPHY MIXIN =====
+@mixin typography($size, $weight: 400, $color: $color-dark) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    line-height: 1.4;
+}
+
+// ===== MATHEMATICAL OPERATIONS MIXIN (для ЛР3) =====
+@mixin calculate-width($base-width, $offset: 0) {
+    width: calc(#{$base-width} - #{$offset});
+    max-width: $base-width;
 }

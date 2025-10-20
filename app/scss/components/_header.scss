@@ -1,80 +1,86 @@
-
-//  Стилі для хедера 
+// Стилі для хедера 
 .resume-header {
-
     background: $color-white;
     padding: $spacing-xl 0;
+    border-bottom: 2px solid $color-bg-gray;
     
     .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 $spacing-xl;
-        
         .name-section {
             .first-name {
-                font-size: $font-size-name;
-                font-weight: 700;
-                color: $color-dark;
-                margin: 0;
+                font-size: $font-size-name; // 67px
+                letter-spacing: 7px;
+                line-height: 58px;
                 text-transform: uppercase;
-                line-height: 1;
+                color: $color-dark; // #111111
+                font-weight: 400; // Змінено на 400
+                font-family: $font-family-montserrat;
+                margin: 0;
             }
             
             .last-name {
-                font-size: $font-size-name;
-                font-weight: 700;
-                color: $color-dark;
-                margin: 0;
+                font-size: $font-size-name; // 67px
+                letter-spacing: 7px;
+                line-height: 58px;
                 text-transform: uppercase;
-                line-height: 1;
+                color: $color-dark; // #111111
+                font-weight: 400; // Змінено на 400
+                font-family: $font-family-montserrat;
+                margin: 0;
             }
             
             .profession {
                 font-size: $font-size-profession;
                 font-weight: 300;
-                color: $color-dark-gray;
+                color: #363636; // Змінено на #363636
                 text-transform: uppercase;
                 letter-spacing: 2px;
                 margin: $spacing-sm 0 0 0;
+                font-family: $font-family-poppins;
             }
         }
         
         .photo-section {
-            .photo-placeholder {
+            .profile-photo {
                 width: 150px;
                 height: 150px;
-                background: $color-bg-gray;
-                border: 2px solid $color-dark;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                
-                span {
-                    color: $color-dark;
-                    font-weight: 600;
-                    font-size: $font-size-body-medium;
-                }
+                object-fit: cover;
+                border: 3px solid $color-primary;
             }
         }
     }
     
     @include respond-to('md') {
+        padding: $spacing-md 0;
+        
         .header-content {
-            flex-direction: column;
             text-align: center;
-            padding: 0 $spacing-md;
             
             .name-section {
                 .first-name, .last-name {
-                    font-size: 2rem;
+                    font-size: 2.5rem; // Адаптивний розмір
+                    letter-spacing: 4px;
+                    line-height: 1.2;
                 }
             }
             
             .photo-section {
                 margin-top: $spacing-md;
+                
+                .profile-photo {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+        }
+    }
+
+    @include respond-to('sm') {
+        .header-content {
+            .name-section {
+                .first-name, .last-name {
+                    font-size: 2rem;
+                    letter-spacing: 3px;
+                }
             }
         }
     }

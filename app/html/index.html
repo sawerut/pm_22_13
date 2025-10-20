@@ -5,127 +5,222 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laura Parker - UI & UX Designer</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@300;400;500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    
+    <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Власні стилі -->
     <link rel="stylesheet" href="css/style.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@300;400;500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header Section -->
     <header class="resume-header">
-    <div class="header-content">
-        <div class="name-section">
-            <h1 class="first-name">LAURA</h1>
-            <h1 class="last-name">PARKER</h1>
-            <h2 class="profession">UI & UX DESIGNER</h2>
-        </div>
-        <div class="photo-section">
-            <img src="img/unnamed.png" alt="Laura Parker" class="profile-photo">
-        </div>
-    </div>
-</header>
-
-    <div class="main-container">
-        <div class="wrapper">
-            <div class="main-content">
-
-                <div class="left-column">
-                    <div class="contact-container">
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <span class="contact-label">Phone</span>
-                                <span class="contact-value">0123 456 789</span>
-                            </div>
-                            <div class="contact-item">
-                                <span class="contact-label">Email</span>
-                                <span class="contact-value">uremail@namehere</span>
-                            </div>
-                            <div class="contact-item">
-                                <span class="contact-label">Address</span>
-                                <span class="contact-value">Your Street Address</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="left-column-content">
-                        <div class="profile-container">
-                            <h3 class="section-title">PROFILE</h3>
-                            <p class="profile-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
-                            </p>
-                        </div>
-
-                        <div class="experience-container">
-                            <h3 class="section-title">EXPERIENCE</h3>
-                            <div class="experience-item">
-                                <h4 class="experience-position">Senior UX Designer - Present</h4>
-                                <p class="experience-company">Company Name / Location</p>
-                                <p class="experience-description">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                </p>
-                            </div>
-                            <div class="experience-item">
-                                <h4 class="experience-position">UX Designer - 2016</h4>
-                                <p class="experience-company">Company Name / Location</p>
-                                <p class="experience-description">
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="reference-container">
-                            <h3 class="section-title">REFERENCE</h3>
-                            <div class="reference-list">
-                                <div class="reference-item">
-                                    <h4 class="reference-position">Senior Designer</h4>
-                                    <p class="reference-name">Jhon Ander Smith</p>
-                                    <p class="reference-company">Company name here</p>
-                                </div>
-                                <div class="reference-item">
-                                    <h4 class="reference-position">Senior Designer</h4>
-                                    <p class="reference-name">Jhon Smith</p>
-                                    <p class="reference-company">Company name here</p>
-                                </div>
-                            </div>
-                        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="name-section">
+                        <h1 class="first-name">LAURA</h1>
+                        <h1 class="last-name">PARKER</h1>
+                        <h2 class="profession">UI & UX DESIGNER</h2>
                     </div>
                 </div>
-                <div class="right-column">
-                    <div class="education-container">
+                <div class="col-md-4 text-md-end">
+                    <div class="photo-section">
+                        <img src="img/unnamed.png" alt="Laura Parker" class="profile-photo img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                </ul>
+                <button class="btn btn-outline-light btn-sm">Download CV</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="container">
+            <div class="row">
+                <!-- Left Column -->
+                <div class="col-lg-8">
+                    
+                    <!-- Contact Section -->
+<section class="contact-container mb-4">
+    <div class="card contact-card" style="background-color: #111111; border: none;">
+        <div class="card-body">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <strong style="color: white;">Phone</strong>
+                    <div style="color: white;">0123 456 789</div>
+                </div>
+                <div class="col-md-4">
+                    <strong style="color: white;">Email</strong>
+                    <div style="color: white;">uremail@namehere</div>
+                </div>
+                <div class="col-md-4">
+                    <strong style="color: white;">Address</strong>
+                    <div style="color: white;">Your Street Address</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+                    <!-- Profile Section -->
+                    <section id="profile" class="profile-container mb-5">
+                        <h3 class="section-title">PROFILE</h3>
+                        <article class="card">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                                </p>
+                            </div>
+                        </article>
+                    </section>
+
+                    <!-- Experience Section -->
+                    <section id="experience" class="experience-container mb-5">
+                        <h3 class="section-title">EXPERIENCE</h3>
+                        
+                        <article class="card mb-3">
+                            <div class="card-body">
+                                <h4 class="card-title">Senior UX Designer - Present</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">Company Name / Location</h6>
+                                <p class="card-text">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                                </p>
+                            </div>
+                        </article>
+                        
+                        <article class="card mb-3">
+                            <div class="card-body">
+                                <h4 class="card-title">UX Designer - 2016</h4>
+                                <h6 class="card-subtitle mb-2 text-muted">Company Name / Location</h6>
+                                <p class="card-text">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                                </p>
+                            </div>
+                        </article>
+                    </section>
+
+                    <!-- Reference Section -->
+                    <section class="reference-container mb-5">
+                        <h3 class="section-title">REFERENCE</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Senior Designer</h5>
+                                        <h6 class="card-subtitle mb-2 text-dark">Jhon Ander Smith</h6>
+                                        <p class="card-text text-muted">Company name here</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Senior Designer</h5>
+                                        <h6 class="card-subtitle mb-2 text-dark">Jhon Smith</h6>
+                                        <p class="card-text text-muted">Company name here</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-lg-4 right-column">
+                    <!-- Education Section -->
+                    <section id="education" class="education-container mb-5">
                         <h3 class="section-title">EDUCATION</h3>
-                        <div class="education-item">
-                            <h4 class="education-years">2014 - 2016</h4>
-                            <p class="education-degree">Degree / Major Name</p>
-                            <p class="education-university">University name here</p>
+                        
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">2014 - 2016</h5>
+                                <h6 class="card-subtitle mb-2 text-dark">Degree / Major Name</h6>
+                                <p class="card-text text-muted">University name here</p>
+                            </div>
                         </div>
-                        <div class="education-item">
-                            <h4 class="education-years">2010 - 2014</h4>
-                            <p class="education-degree">Degree / Major Name</p>
-                            <p class="education-university">University name here</p>
+                        
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">2010 - 2014</h5>
+                                <h6 class="card-subtitle mb-2 text-dark">Degree / Major Name</h6>
+                                <p class="card-text text-muted">University name here</p>
+                            </div>
                         </div>
-                    </div>
+                    </section>
 
-                    <div class="language-container">
+                    <!-- Language Section -->
+                    <section class="language-container mb-5">
                         <h3 class="section-title">LANGUAGE</h3>
-                        <ul class="language-list">
-                            <li class="language-item">English</li>
-                            <li class="language-item">French</li>
-                            <li class="language-item">Spanish</li>
-                        </ul>
-                    </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li class="language-item">English</li>
+                                    <li class="language-item">French</li>
+                                    <li class="language-item">Spanish</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
 
-                    <div class="skills-container">
+                    <!-- Skills Section -->
+                    <section id="skills" class="skills-container mb-5">
                         <h3 class="section-title">SKILLS</h3>
-                        <ul class="skills-list">
-                            <li class="skills-item">Photoshop</li>
-                            <li class="skills-item">Illustrator</li>
-                            <li class="skills-item">InDesign</li>
-                            <li class="skills-item">After Effects</li>
-                            <li class="skills-item">Sketch</li>
-                        </ul>
-                    </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li class="skills-item">Photoshop</li>
+                                    <li class="skills-item">Illustrator</li>
+                                    <li class="skills-item">InDesign</li>
+                                    <li class="skills-item">After Effects</li>
+                                    <li class="skills-item">Sketch</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                </div>
+            </div>
         </div>
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Laura Parker. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <nav>
+                        <a href="#" class="text-white me-3">Privacy Policy</a>
+                        <a href="#" class="text-white">Terms of Service</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Власні скрипти -->
+    <script src="js/script.min.js"></script>
 </body>
 </html>

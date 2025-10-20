@@ -1,40 +1,37 @@
-//  Стилі для лівої колонки 
+// Стилі для лівої колонки 
 .left-column {
-    flex: 1;
+    background-color: $color-white; // Білий фон для PROFILE, EXPERIENCE, REFERENCE
+    padding: $spacing-xl;
 
     // Контактна інформація
     .contact-container {
         margin-bottom: $spacing-xl;
         
-        .contact-info {
-            width: 100%; // Розтягуємо на всю ширину колонки
+        .contact-card {
             background-color: $color-contact-bg;
-            padding: $spacing-lg;
-            border-radius: 0; // Гострі кути
-
-            //  Розміщуємо елементи контактів в рядок
-            display: flex;
-            justify-content: space-around;
+            border: none;
             
-            .contact-item {
-                text-align: center; // Центруємо текст всередині кожного блоку
-
-                // Робимо span блочними, щоб вони стали один під одним
-                .contact-label, .contact-value {
-                    display: block;
-                    color: $color-white;
-                    font-family: $font-family-poppins;
-                }
+            .card-body {
+                padding: $spacing-lg;
                 
-                .contact-label {
-                    font-size: $font-size-contact-label;
-                    font-weight: 600;
-                    margin-bottom: $spacing-xs;
-                }
-                
-                .contact-value {
-                    font-size: $font-size-contact-value;
-                    font-weight: 300;
+                .row {
+                    .col-md-4 {
+                        strong {
+                            display: block;
+                            color: $color-white;
+                            font-family: $font-family-poppins;
+                            font-size: $font-size-contact-label;
+                            font-weight: 600;
+                            margin-bottom: $spacing-xs;
+                        }
+                        
+                        div {
+                            color: $color-white;
+                            font-family: $font-family-poppins;
+                            font-size: $font-size-contact-value;
+                            font-weight: 300;
+                        }
+                    }
                 }
             }
         }
@@ -50,7 +47,7 @@
         margin-bottom: $spacing-xl;
         
         .profile-text {
-            width: $profile-width;
+            @include calculate-width(100%, 0);
             font-size: $font-size-body-large;
             line-height: 1.6;
             color: $color-gray;
@@ -72,6 +69,7 @@
                 font-weight: 600;
                 color: $color-dark;
                 margin: 0 0 $spacing-xs 0;
+                font-family: $font-family-poppins;
             }
             
             .experience-company {
@@ -82,7 +80,7 @@
             }
             
             .experience-description {
-                width: $experience-width;
+                @include calculate-width(100%, 0);
                 font-size: $font-size-body-medium;
                 line-height: 1.5;
                 color: $color-gray;
@@ -102,11 +100,14 @@
         }
         
         .reference-item {
+            @include card-style($spacing-md);
+            
             .reference-position {
                 font-size: $font-size-body-large;
                 font-weight: 600;
                 color: $color-dark;
                 margin: 0 0 $spacing-xs 0;
+                font-family: $font-family-poppins;
             }
             
             .reference-name {

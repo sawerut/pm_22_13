@@ -1,44 +1,43 @@
-//  Шрифти 
-$font-family-montserrat: 'Montserrat', sans-serif;
-$font-family-poppins: 'Poppins', sans-serif;
-$font-family-roboto: 'Roboto', sans-serif;
-
-//  Кольори 
-$color-dark: #111111;
-$color-dark-gray: #363636;
-$color-gray: #252525;
-$color-light-gray: #707070;
-$color-lighter-gray: #282828;
+// ===== COLORS =====
+$color-primary: #007bff;
 $color-white: #ffffff;
+$color-dark: #111111; // Змінено на #111111
+$color-gray: #666666;
+$color-light-gray: #999999;
+$color-dark-gray: #555555;
 $color-bg-gray: #ebebeb;
 $color-contact-bg: #111111;
 
-//  розміри шрифтів 
-$font-size-name: 2.5rem;          // 40px
-$font-size-profession: 1.2rem;    // 19px
-$font-size-contact-label: 1rem;   // 16px
-$font-size-contact-value: 0.9rem; // 14px
-$font-size-section-title: 1.1rem; // 18px
-$font-size-body-large: 1rem;      // 16px
-$font-size-body-medium: 0.9rem;   // 14px
+// ===== FONT FAMILIES =====
+$font-family-poppins: 'Poppins', sans-serif;
+$font-family-roboto: 'Roboto', sans-serif;
+$font-family-montserrat: 'Montserrat', sans-serif;
 
-// ===== Відступи =====
-$spacing-xs: 0.5rem;  // 8px
-$spacing-sm: 1rem;    // 16px
-$spacing-md: 1.5rem;  // 24px
-$spacing-lg: 2rem;    // 32px
-$spacing-xl: 3rem;    // 48px
+// ===== FONT SIZES =====
+$font-size-name: 67px; // Змінено на 67px
+$font-size-profession: 1.25rem;
+$font-size-section-title: 1.5rem;
+$font-size-section-title-mobile: 1.25rem;
+$font-size-body-large: 1.125rem;
+$font-size-body-medium: 1rem;
+$font-size-body-small: 0.875rem;
+$font-size-contact-label: 0.9rem;
+$font-size-contact-value: 1rem;
 
-//  Розміри 
-$contact-width: 100%;
-$contact-height: auto;
+// ===== SPACING =====
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+
+// ===== WIDTHS =====
 $profile-width: 100%;
 $experience-width: 100%;
-$right-column-width: 300px;
+$right-column-width: 100%;
 
-//  Breakpoints 
+// ===== BREAKPOINTS =====
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
-$breakpoint-xxl: 1400px;

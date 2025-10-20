@@ -1,16 +1,15 @@
-// app/scss/components/_right-column.scss
-
-//  Стилі для правої колонки 
+// Стилі для правої колонки 
 .right-column {
-    width: $right-column-width;
-    background-color: $color-bg-gray;
+    background-color: $color-bg-gray; // Колір #ebebeb
     padding: $spacing-xl;
-
+    border-left: 1px solid #dee2e6;
+    
     // Освіта
     .education-container {
         margin-bottom: $spacing-xl;
         
         .education-item {
+            @include card-style($spacing-md);
             margin-bottom: $spacing-lg;
             
             .education-years {
@@ -18,12 +17,14 @@
                 font-weight: 600;
                 color: $color-dark;
                 margin: 0 0 $spacing-xs 0;
+                font-family: $font-family-poppins;
             }
             
             .education-degree {
                 font-weight: 500;
                 color: $color-dark;
                 margin: 0 0 $spacing-xs 0;
+                font-size: calc(#{$font-size-body-medium} + 0.0625rem);
             }
             
             .education-university {
@@ -34,7 +35,7 @@
         }
     }
 
-    // Мови
+    // Мови - повертаємо старий список
     .language-container {
         margin-bottom: $spacing-xl;
         
@@ -45,10 +46,10 @@
             
             .language-item {
                 color: $color-gray;
-                margin-bottom: $spacing-sm; // Збільшимо відступ
+                margin-bottom: $spacing-sm;
                 font-size: $font-size-body-medium;
 
-                //  Створюємо кастомний маркер-квадрат
+                // Кастомний маркер-квадрат як раніше
                 &::before {
                     content: '';
                     display: inline-block;
@@ -61,7 +62,7 @@
         }
     }
 
-    // Навички
+    // Навички - повертаємо старий список
     .skills-container {
         .skills-list {
             list-style: none;
@@ -70,10 +71,10 @@
             
             .skills-item {
                 color: $color-gray;
-                margin-bottom: $spacing-sm; // Збільшимо відступ
+                margin-bottom: $spacing-sm;
                 font-size: $font-size-body-medium;
 
-                // Створюємо кастомний маркер-квадрат
+                // Кастомний маркер-квадрат як раніше
                 &::before {
                     content: '';
                     display: inline-block;
@@ -86,7 +87,35 @@
         }
     }
 
+    // Спеціальні стилі для правої колонки
+    .card {
+        background: $color-white;
+        border: 1px solid #e9ecef;
+        
+        .card-body {
+            padding: $spacing-md;
+        }
+    }
+
     @include respond-to('md') {
-        width: 100%;
+        border-left: none;
+        border-top: 1px solid #dee2e6;
+        padding: $spacing-md;
+        
+        .education-item,
+        .language-list .language-item,
+        .skills-list .skills-item {
+            margin-bottom: $spacing-md;
+        }
+    }
+    
+    @include respond-to('sm') {
+        padding: $spacing-sm;
+        
+        .education-container,
+        .language-container,
+        .skills-container {
+            margin-bottom: $spacing-lg;
+        }
     }
 }
